@@ -24,4 +24,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+#Netlify
+/out_publish/
+/out_functions/
+404.html
+
+#Helper
 articles.txt
