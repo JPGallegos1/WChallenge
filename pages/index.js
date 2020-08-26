@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Nav from "../components/nav";
+import { Heading } from "@chakra-ui/core";
 
 const Home = () => (
   <div>
@@ -11,7 +12,7 @@ const Home = () => (
     <Nav />
 
     <div className="hero">
-      <h1 className="title">Welcome to Wollox Challenge</h1>
+      <Heading as="h3">Welcome to Wollox Challenge</Heading>
       <p className="description">
         To get started, edit <code>pages/index.js</code> and save to reload.
       </p>
