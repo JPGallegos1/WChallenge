@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint . --fix",
-    "test": "jest"
+    "test": "jest",
+    "docker:wolox": "docker build -t wolox . && docker run --name WOLOX_CONTAINER -p 0.0.0.0:5000:3000 wolox"
   },
   "dependencies": {
     "@chakra-ui/core": "^0.8.0",

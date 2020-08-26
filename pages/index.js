@@ -17,6 +17,7 @@ const Home = () => (
         To get started, edit <code>pages/index.js</code> and save to reload.
       </p>
 
+      <img src="assets/Ic_brain.svg" alt="text" />
       <div className="row">
         <a href="https://nextjs.org/docs" className="card">
           <h3>Documentation &rarr;</h3>
