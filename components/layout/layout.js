@@ -1,6 +1,6 @@
 import { Flex } from "@chakra-ui/core";
 
-const Layout = ({ children, as, align, justify, p, m, h, w, flex, backgroundImage, backgroundRepeat, backgroundSize, backgroundPosition, flexDirection }) => {
+const Layout = ({ children, as, align, justify, p, m, h, w, flex, backgroundColor, backgroundImage, backgroundRepeat, backgroundSize, backgroundPosition, flexDirection }) => {
   return (
     <Flex
       as={as}
@@ -12,6 +12,7 @@ const Layout = ({ children, as, align, justify, p, m, h, w, flex, backgroundImag
       width={w}
       margin={m}
       padding={p}
+      backgroundColor={backgroundColor}
       backgroundImage={backgroundImage}
       backgroundRepeat={backgroundRepeat}
       backgroundSize={backgroundSize}
