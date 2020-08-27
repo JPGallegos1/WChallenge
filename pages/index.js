@@ -1,7 +1,7 @@
-import HomePage from "../components/home/home";
+import Main from "../components/layout/main";
 const Home = () => {
   return (
-    <HomePage />
+    <Main />
   );
 };
 
