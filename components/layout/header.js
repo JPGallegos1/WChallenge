@@ -9,12 +9,12 @@ const Header = () => {
       align="center"
       justify="space-between"
       wrap="wrap"
-      p="1.5rem"
+      p="1.5rem 2rem 0 2rem"
       backgroundImage="url('assets/Backgrounds/Bg_Header.png')"
       backgroundRepeat="no-repeat"
       backgroundSize="cover"
       backgroundPosition="center center"
-      h={40}
+      h="10rem"
     >
       <Logo />
       <Nav />

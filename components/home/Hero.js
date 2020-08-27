@@ -1,14 +1,15 @@
 import { Image, Box } from "@chakra-ui/core";
 
-const Hero = () => (
+const Hero = ({ src, alt, width, height, padding, flex }) => (
   <>
     <Box>
       <Image
-        src="assets/ImgHero/Ic_ilustra_Hero.png"
-        alt="Wolox logo"
-        w="100%"
-        h="20rem"
-        pr="5rem"
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        padding={padding}
+        flex={flex}
       />
     </Box>
   </>
