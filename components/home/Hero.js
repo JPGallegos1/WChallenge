@@ -1,15 +1,10 @@
 import { Image, Box } from "@chakra-ui/core";
 
-const Hero = ({ src, alt, width, height, padding, flex }) => (
+const Hero = ({ ...props }) => (
   <>
     <Box>
       <Image
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        padding={padding}
-        flex={flex}
+        {...props}
       />
     </Box>
   </>
