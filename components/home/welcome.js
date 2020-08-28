@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/core";
 import Layout from "../layout/layout";
-import Hero from "./hero";
+import Hero from "../hero";
 import Title from "../title";
 
 const Welcome = () => {
