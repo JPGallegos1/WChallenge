@@ -1,5 +1,6 @@
-import { ThemeProvider, CSSReset } from "@chakra-ui/core";
 import Header from "../components/layout/header";
+import Main from "../components/layout/main";
+import { ThemeProvider, CSSReset } from "@chakra-ui/core";
 import { CustomTheme } from "../styles/theme";
 
 const App = ({ Component, pageProps }) => {
@@ -7,7 +8,9 @@ const App = ({ Component, pageProps }) => {
     <ThemeProvider theme={CustomTheme}>
       <CSSReset />
       <Header />
-      <Component {...pageProps} />
+      <Main>
+        <Component {...pageProps} />
+      </Main>
     </ThemeProvider>
   );
 };
