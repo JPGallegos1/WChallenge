@@ -18,7 +18,8 @@
     "next": "9.5.2",
     "next-on-netlify": "^2.3.2",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-hook-form": "^6.6.0"
   },
   "devDependencies": {
     "@testing-library/dom": "^7.22.6",
