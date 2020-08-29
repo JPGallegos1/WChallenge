@@ -12,13 +12,13 @@ const Welcome = () => {
         justify="space-between"
         wrap="wrap"
         p="0 2rem 0 2rem"
-        backgroundImage="url('assets/Backgrounds/Bg_Header.png')"
+        backgroundImage={{ sm: "unset", md: "url('assets/Backgrounds/Bg_Header.png')" }}
         backgroundRepeat="no-repeat"
         backgroundSize="cover"
         backgroundPosition="center center"
-        h="90vh"
+        h={{ sm: "60vh", md: "90vh" }}
       >
-        <Title as="h1" fontSize="2.8rem" flex="0 0 35%">
+        <Title as="h1" fontSize="2.8rem" flex={{ sm: 1, md: "0 0 35%" }} textAlign={{ sm: "center", md: "left" }}>
           Bienvenido a tu Entrevista Técnica en Wolox
         </Title>
         <Hero
@@ -27,6 +27,7 @@ const Welcome = () => {
           width="100%"
           height="20rem"
           padding="0 5rem 0 0"
+          display={{ sm: "none", md: "block" }}
         />
       </Layout>
     </Box>
