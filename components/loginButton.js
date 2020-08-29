@@ -5,16 +5,17 @@ const LoginButton = () => {
   return (
     <>
       <NextLink href="/login">
-        <Link as="button">
+        <Link>
           <PseudoBox
+            as="button"
             bg="transparent"
             color="blue.300"
-            p={{ sm: "0", md: 2 }}
-            w={{ sm: "100%", md: "8rem" }}
-            borderRadius={{ sm: "none", md: "10rem" }}
-            border={{ sm: "none", md: "1px solid" }}
-            borderColor={{ sm: "transparent", md: "blue.300" }}
-            _hover={{ bg: "blue.200", color: "black" }}
+            p={2}
+            w="8rem"
+            borderRadius="10rem"
+            border="1px solid"
+            borderColor="blue.300"
+            _hover={{ bg: "blue.200", color: "white" }}
             transition="all .3s ease">
             Login
           </PseudoBox>
