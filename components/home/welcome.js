@@ -5,7 +5,10 @@ import Title from "../title";
 
 const Welcome = () => {
   return (
-    <Box as="section">
+    <Box
+      as="section"
+      borderBottom={{ sm: "1px solid", md: "none" }}
+      borderColor={{ sm: "gray.200" }}>
       <Layout
         as="div"
         align="center"
@@ -18,7 +21,11 @@ const Welcome = () => {
         backgroundPosition="center center"
         h={{ sm: "60vh", md: "90vh" }}
       >
-        <Title as="h1" fontSize="2.8rem" flex={{ sm: 1, md: "0 0 35%" }} textAlign={{ sm: "center", md: "left" }}>
+        <Title
+          as="h1"
+          fontSize="2.8rem"
+          flex={{ sm: 1, md: "0 0 35%" }}
+          textAlign={{ sm: "center", md: "left" }}>
           Bienvenido a tu Entrevista Técnica en Wolox
         </Title>
         <Hero

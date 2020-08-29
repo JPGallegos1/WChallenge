@@ -10,11 +10,18 @@ const Technologies = () => {
         as="div"
         align="center"
         justify="space-between"
+        flexDirection={{ sm: "column", md: "row" }}
         backgroundColor="white"
         p="0 2rem 0 2rem"
-        h="100vh"
+        mb={{ sm: "5rem", md: "0" }}
+        h={{ sm: "60vh", md: "80vh" }}
       >
-        <Title as="h2" fontSize="2rem" flex="0 0 35%">
+        <Title
+          as="h2"
+          fontSize="2rem"
+          flex={{ sm: "1", md: "0 0 35%" }}
+          textAlign={{ sm: "center", md: "left" }}
+        >
           Estamos buscando para incorporar gente increíble para estas tecnologías
         </Title>
         <Hero
