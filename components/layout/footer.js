@@ -17,12 +17,28 @@ const Header = () => {
       backgroundPosition="center center"
       h="80vh"
     >
-      <Layout as="div" flexDirection="column" justify="space-around" flex="0 0 50%" align="center">
-        <Title as="h2" fontSize="3.3rem">
-          Gracias por completar el ejercicio
+      <Layout
+        as="div"
+        flexDirection="column"
+        justify="space-around"
+        flex="0 0 50%"
+        align="center"
+      >
+        <Title
+          as="h2"
+          fontSize={{ sm: "2.3rem", md: "3.3rem" }}
+          textAlign={{ sm: "center" }}
+          mb={{ sm: "1rem", md: "0" }}
+        >
+          ¡Gracias por completar el ejercicio!
         </Title>
 
-        <Title as="h2" fontSize="2.3rem">
+        <Title
+          as="h2"
+          fontSize={{ sm: "1.6rem", md: "2.3rem" }}
+          textAlign={{ sm: "center" }}
+          mb={{ sm: "1rem", md: "0" }}
+        >
           Te invitamos a ver más información
         </Title>
 
