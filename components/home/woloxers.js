@@ -9,9 +9,10 @@ const Woloxers = () => {
         as="div"
         align="center"
         justify="space-between"
-        backgroundColor="gray.300"
-        p="0 2rem 0 0"
+        backgroundColor="gray.200"
+        p={{ sm: "0", md: "0 2rem 0 0" }}
         h="70vh"
+        flexDirection={{ sm: "column", md: "row" }}
       >
         <Layout
           as="div"
@@ -29,7 +30,7 @@ const Woloxers = () => {
             350 + Woloxers
           </Title>
 
-          <Layout flexDirection="row" alignItems="center" justifyContent="center">
+          <Layout flexDirection="row" align="center" justify="center">
             <Box>Icono</Box>
             <Box>@Wolox</Box>
           </Layout>
@@ -37,9 +38,11 @@ const Woloxers = () => {
 
         </Layout>
 
-        <Title as="h2" fontSize="2rem" flex="0 0 35%" textAlign="center">
-          Trabajamos para convertir ideas en productos
-        </Title>
+        <Box alignItems="center" justify="center" flex="0 0 35%">
+          <Title as="h2" fontSize="2rem" textAlign="center" m={{ sm: "3rem", md: "0" }} >
+            Trabajamos para convertir ideas en productos
+          </Title>
+        </Box>
       </Layout>
     </Box>
   );
