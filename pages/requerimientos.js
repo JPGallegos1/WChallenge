@@ -1,8 +1,8 @@
+import Requirements from "../components/home/requirements";
+
 const Requerimientos = () => {
   return (
-    <>
-      desde requeriments
-    </>
+    <Requirements />
   );
 };
 
