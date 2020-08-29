@@ -1,8 +1,8 @@
+import Benefits from "../components/home/benefits";
+
 const Beneficios = () => {
   return (
-    <>
-      desde benefits
-    </>
+    <Benefits />
   );
 };
 
