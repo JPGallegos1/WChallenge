@@ -1,7 +1,7 @@
 import NextLink from "next/link";
 import Layout from "./layout";
 import LoginButton from "../loginButton";
-import { Link, Box } from "@chakra-ui/core";
+import { Link } from "@chakra-ui/core";
 
 const links = [
   { label: "Inicio", href: "/" },
@@ -13,8 +13,13 @@ const links = [
 links.map(link => { link.key = `nav-link-${link.label}-${link.href}`; });
 
 const Nav = () => (
-  <Box as="nav">
-    <Layout as="ul" justify="space-between" align="center" w="30rem">
+  <Layout as="nav" flexDirection={{ sm: "column", md: "row" }} align="center">
+    <Layout
+      as="ul"
+      justify="space-between"
+      align="center"
+      w={{ sm: "20rem", md: "30rem" }}
+    >
       {links.map(({ key, label, href }) => (
         <NextLink key={key} href={href}>
           <Link>
@@ -22,9 +27,10 @@ const Nav = () => (
           </Link>
         </NextLink>
       ))}
-      <LoginButton />
+
     </Layout>
-  </Box>
+    <LoginButton />
+  </Layout >
 );
 
 export default Nav;
