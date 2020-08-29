@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/core";
+import { Box, SimpleGrid } from "@chakra-ui/core";
 import Layout from "../layout/layout";
 import Title from "../title";
 import Hero from "../hero";
@@ -16,21 +16,25 @@ benefits.map(benefit => { benefit.key = `nav-link-${benefit.label}-${benefit.src
 
 const Benefits = () => {
   return (
-    <Box as="section">
+    <Box as="section" borderBottom="2px solid" borderColor="gray.200" w="90%" m="0 auto" pb="2rem">
       <Layout
         as="div"
         align="center"
         backgroundColor="white"
         p="0 2rem 0 2rem"
-        h="100vh"
         flexDirection="column"
       >
-        <Title as="h2" fontSize="2rem" flex="0 0 35%" pt="5rem">
+        <Title
+          as="h2"
+          fontSize="2rem"
+          flex="0 0 35%"
+          pt="5rem"
+          textAlign={{ sm: "center", md: "left" }}>
           Entre los beneficios que ofrecemos se encuentran ;)
         </Title>
-        <Layout as="ul" justify="space-between" align="center" w="100%" pt="5rem">
+        <SimpleGrid as="ul" minChildWidth="90px" spacing="40px" justify="space-between" align="center" w="100%" pt="5rem">
           {benefits.map(({ key, label, src, alt }) => (
-            <Layout as="li" key={key} justify="space-between" align="center" w="30rem" flexDirection="column">
+            <Layout as="li" key={key} justify="space-between" align="center" flexDirection="column">
               <Hero src={src} alt={alt} mb={4} />
 
               <Box textAlign="center">
@@ -38,7 +42,7 @@ const Benefits = () => {
               </Box>
             </Layout>
           ))}
-        </Layout>
+        </SimpleGrid>
 
       </Layout>
     </Box>
