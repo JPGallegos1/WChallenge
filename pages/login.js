@@ -1,65 +1,26 @@
-import { useState } from "react";
+import { useSubmit } from "../hooks/useSubmit";
+import { Input, Checkbox } from "@chakra-ui/core";
 import { useForm } from "react-hook-form";
-import { useLocalStorage } from "../hooks/useLocalStorage";
-import { useRouter } from "next/router";
 
 const Login = () => {
-  const { register, handleSubmit, errors } = useForm({
+  const { register, errors, handleSubmit } = useForm({
     defaultValues: {
       email: "user@wolox.com.ar",
       password: "",
       remember: false
     }
   });
-  const [submitting, setSubmitting] = useState(false);
-  const { setValue, storedValue } = useLocalStorage("session", {});
 
-  const router = useRouter();
+  const { onSubmit, loading, submitting } = useSubmit();
 
   return (
     <div>
-      <form onSubmit={handleSubmit(async (formData) => {
-        setSubmitting(true);
+      {loading && (<div>Cargando...</div>)}
 
-        const options = {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json"
-          },
-          body: JSON.stringify({
-            email: formData.name,
-            password: formData.password,
-            remember: formData.remember
-          })
-        };
-
-        const response = await fetch("http://private-8e8921-woloxfrontendinverview.apiary-mock.com/login", options);
-
-        const data = await response.json();
-
-        if (formData.remember) {
-          const { email } = formData;
-          const { token } = data;
-
-          const session = {
-            email,
-            token
-          };
-          setValue(session);
-
-          // Here I want the user be redirected to /tecnologias
-          router.push("/tecnologia");
-        } else {
-          setValue({});
-        }
-
-        console.log(storedValue);
-
-        setSubmitting(false);
-      })}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label htmlFor="email">Email</label>
-          <input
+          <Input
             type="email"
             name="email"
             id="email"
@@ -70,7 +31,7 @@ const Login = () => {
         </div>
         <div>
           <label htmlFor="password">Password</label>
-          <input
+          <Input
             type="password"
             name="password"
             id="password"
@@ -91,14 +52,13 @@ const Login = () => {
         </div>
         <div>
           <label htmlFor="terms">Desea ser recordado?</label>
-          <input
-            type="checkbox"
+          <Checkbox
             name="remember"
             id="remember"
             ref={register}
           />
         </div>
-        <input type="submit" disabled={submitting} value="Iniciar sesión" />
+        <Input type="submit" disable={submitting} value="Iniciar sesión" />
       </form>
     </div>
   );
