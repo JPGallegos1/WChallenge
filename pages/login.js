@@ -1,6 +1,7 @@
 import { useSubmit } from "../hooks/useSubmit";
-import { Input, Checkbox } from "@chakra-ui/core";
+import { Input } from "@chakra-ui/core";
 import { useForm } from "react-hook-form";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 
 const Login = () => {
   const { register, errors, handleSubmit } = useForm({
@@ -11,7 +12,7 @@ const Login = () => {
     }
   });
 
-  const { onSubmit, loading, submitting } = useSubmit();
+  const { onSubmit, loading, submitting, router } = useSubmit();
 
   return (
     <div>
@@ -52,13 +53,14 @@ const Login = () => {
         </div>
         <div>
           <label htmlFor="terms">Desea ser recordado?</label>
-          <Checkbox
+          <input
+            type="checkbox"
             name="remember"
             id="remember"
             ref={register}
           />
         </div>
-        <Input type="submit" disable={submitting} value="Iniciar sesión" />
+        <Input type="submit" as="button" disable={submitting} value="Iniciar sesión" />
       </form>
     </div>
   );
