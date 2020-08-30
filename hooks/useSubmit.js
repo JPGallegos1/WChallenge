@@ -55,6 +55,7 @@ export function useSubmit () {
     onSubmit,
     localUser,
     submitting,
-    user
+    user,
+    router
   };
 };
