@@ -4,7 +4,7 @@ export function useLocalStorage (key, initialValue) {
   const [user, setUser] = useState(() => {
     try {
       // Get key from ls
-      const item = localStorage.getItem(key);
+      const item = window.localStorage.getItem(key);
 
       return item ? JSON.parse(item) : initialValue;
     } catch (error) {
@@ -25,7 +25,7 @@ export function useLocalStorage (key, initialValue) {
       setUser(userToStore);
 
       // save to ls
-      localStorage.setItem(key, JSON.stringify(userToStore));
+      window.localStorage.setItem(key, JSON.stringify(userToStore));
     } catch (error) {
       console.log(error);
     }
