@@ -1,4 +1,4 @@
-import Benefits from "../components/home/benefits";
+import Benefits from "../components/landing/benefits";
 
 const Beneficios = () => {
   return (

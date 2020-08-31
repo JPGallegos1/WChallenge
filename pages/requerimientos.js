@@ -1,4 +1,4 @@
-import Requirements from "../components/home/requirements";
+import Requirements from "../components/landing/requirements";
 
 const Requerimientos = () => {
   return (
