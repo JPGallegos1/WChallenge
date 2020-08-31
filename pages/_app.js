@@ -1,3 +1,4 @@
+import { TechsProvider } from "../context/techsContext/techsContext";
 import Header from "../components/layout/header";
 import Footer from "../components/layout/footer";
 import Main from "../components/layout/main";
@@ -7,12 +8,14 @@ import { CustomTheme } from "../styles/theme";
 const App = ({ Component, pageProps }) => {
   return (
     <ThemeProvider theme={CustomTheme}>
-      <CSSReset />
-      <Header />
-      <Main>
-        <Component {...pageProps} />
-      </Main>
-      <Footer />
+      <TechsProvider>
+        <CSSReset />
+        <Header />
+        <Main>
+          <Component {...pageProps} />
+        </Main>
+        <Footer />
+      </TechsProvider>
     </ThemeProvider>
   );
 };
