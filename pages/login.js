@@ -1,7 +1,6 @@
 import { useSubmit } from "../hooks/useSubmit";
 import { Input } from "@chakra-ui/core";
 import { useForm } from "react-hook-form";
-import { useLocalStorage } from "../hooks/useLocalStorage";
 
 const Login = () => {
   const { register, errors, handleSubmit } = useForm({
@@ -12,7 +11,7 @@ const Login = () => {
     }
   });
 
-  const { onSubmit, loading, submitting, router } = useSubmit();
+  const { onSubmit, loading, submitting } = useSubmit();
 
   return (
     <div>

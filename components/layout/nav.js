@@ -2,7 +2,6 @@ import NextLink from "next/link";
 import Layout from "./layout";
 import LoginButton from "../loginButton";
 import { Link } from "@chakra-ui/core";
-import { useLocalStorage } from "../../hooks/useLocalStorage";
 
 const Nav = () => {
   // const { user: { remember, email } } = useLocalStorage("session");
