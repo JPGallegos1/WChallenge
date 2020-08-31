@@ -1,30 +1,35 @@
 import { useRef, useState } from "react";
 
-export function useFetch (cb, ...options) {
-  const isMounted = useRef();
-  const [response, setResponse] = useState(null);
+export function useFetch (url) {
+  const [response, setResponse] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState([]);
+  const isMounted = useRef();
 
   return {
-    response,
     loading,
-    isMounted,
-    reset: () => setResponse(),
-    fetch: async (reload = false) => {
+    response,
+    getData: async (reload = false) => {
       try {
-        if (!response || reload) setLoading(true);
-        const data = await cb(...options);
+        // allows the component to be mounted
+        isMounted.current = true;
+
+        // get data
+        setLoading(true); // to see Skeleton please use the Network tab in DevTools
+        const res = await fetch(url);
+
+        // validation after get a response
+        if (!res || reload) setLoading(true);
+        const data = await res.json();
+
+        // just if the component is mounted we will save the remote data
         if (isMounted.current) {
           if (data) setResponse(data);
-        }
+        };
       } catch (error) {
-        setError(error);
+        console.log(error);
       } finally {
         setLoading(false);
       }
-    },
-    error,
-    setLoading
+    }
   };
 }
