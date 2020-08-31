@@ -1,43 +1,16 @@
-import { useEffect, useState } from "react";
-import { useFetch } from "../hooks/useFetch";
-import { API, TECHS_ENDPOINT } from "../constants";
+import { useTechsContext } from "../context/techsContext/techsContext";
 import Layout from "../components/layout/layout";
 import Title from "../components/title";
-import Item from "../components/item";
-import { SimpleGrid, Skeleton, Input } from "@chakra-ui/core";
-
-export const URL = `${API}/${TECHS_ENDPOINT}`;
+import TechItem from "../components/techitem";
+import { SimpleGrid, Input } from "@chakra-ui/core";
+import SkeletonItem from "../components/skeleton";
 
 const Tecnologias = () => {
-  const [searchTech, setSearchTech] = useState("");
-  const [sortTech, setSortTech] = useState("");
-  const { getData, loading, response } = useFetch(URL);
-
-  useEffect(() => {
-    getData();
-  }, []);
-
-  const filterTechs = response.filter(tech => {
-    return (
-      tech.tech.toLowerCase().includes(searchTech.toLowerCase()) ||
-      tech.type.toLowerCase().includes(searchTech.toLowerCase())
-    );
-  });
-
-  const techs = [...filterTechs].sort((a, b) => {
-    return (
-      (sortTech === "ASC" && a.tech.localeCompare(b.tech)) ||
-      (sortTech === "DESC" && b.tech.localeCompare(a.tech))
-    );
-  });
+  const { techs, loading, setSearchTech, setSortTech } = useTechsContext();
 
   return (
     <Layout as="section" flexDirection={{ sm: "column" }}>
-      {loading && <div>
-        <Skeleton height="20px" my="10px" colorStart="cyan" colorEnd="green" />
-        <Skeleton height="20px" my="10px" colorStart="cyan" colorEnd="green" />
-        <Skeleton height="20px" my="10px" colorStart="cyan" colorEnd="green" />
-      </div>}
+      {loading && <SkeletonItem />}
 
       <Title>¡Bienvenide a la lista de tecnologías!</Title>
       <Layout>
@@ -57,7 +30,7 @@ const Tecnologias = () => {
         </select>
       </Layout>
       <SimpleGrid as="ul" minChildWidth="300px" spacing="40px" justify="space-between" align="center" w="100%" pt="5rem">
-        {techs.map(tech => <Item key={tech.tech} tech={tech} />)}
+        {techs.map(tech => <TechItem key={tech.tech} tech={tech} />)}
       </SimpleGrid>
       <p>{techs.length}</p>
     </Layout>
