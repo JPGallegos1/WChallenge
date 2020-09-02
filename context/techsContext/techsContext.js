@@ -1,8 +1,7 @@
 import { createContext, useEffect, useContext, useState } from "react";
 import { useFetch } from "../../hooks/useFetch";
-import { API, TECHS_ENDPOINT } from "../../constants";
 
-export const URL = `${API}/${TECHS_ENDPOINT}`;
+export const URL = "http://private-8e8921-woloxfrontendinverview.apiary-mock.com/techs";
 export const TechsContext = createContext();
 
 export const TechsProvider = ({ children }) => {
@@ -35,7 +34,7 @@ export const TechsProvider = ({ children }) => {
   );
 };
 
-export function useTechsContext () {
+export function useTechsContext() {
   const context = useContext(TechsContext);
 
   if (!context) {
