@@ -1,9 +1,16 @@
 # Wolox Challenge
 
-#### Run it!
+#### Starting...
 - Clone the project
-- Run: `yarn install`
 - Go to the project root
+
+##### Set the environment variables:
+- `NEXT_PUBLIC_BASE_URL=http://private-8e8921-woloxfrontendinverview.apiary-mock.com`
+- `NEXT_PUBLIC_LOGIN_ENDPOINT=login`
+- `NEXT_PUBLIC_TECHS_ENDPOINT=techs`
+
+#### Run it!
+- Run: `yarn install`
 - Run: `yarn dev` or...
 - `yarn build` and `yarn start`
 
