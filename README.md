@@ -1,8 +1,13 @@
 # Wolox Challenge
 
-## Here you can take a look to the final app: https://wolox-challenge-3pe6d98us.vercel.app/
+#### Run it!
+- Clone the project
+- Run: `yarn install`
+- Go to the project root
+- Run: `yarn dev` or...
+- `yarn build` and `yarn start`
 
-## Docker configuration
+## Or you can try Docker configuration
 
 - With the Dockerfile, I won't integrate CI/CD from here or some kind of testing. I'm looking to share my environment, so it just contains a basic configuration to run at http://localhost:5000 
 
