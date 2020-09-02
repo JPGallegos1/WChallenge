@@ -24,9 +24,8 @@ function ModalTech ({ isOpen, onClose, tech }) {
 
           <ModalFooter>
             <Button variantColor="blue" mr={3} onClick={onClose}>
-              Close
+              Cerrar
             </Button>
-            <Button variant="ghost">Secondary Action</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
