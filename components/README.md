@@ -19,11 +19,11 @@ To be honest, I won't spend so much time dealing with media-queries. I mean, the
 - `pb, pt, pl, pt === padding-top, bottom, left, right`
 - `bg === background`
 
-##### `sm` and `md` props:
+#### `sm` and `md` props:
 
 - They are mediaqueries defined inside `theme.js`
 
-- is like to do:
+is like to do:
 - `media screen and @media(min-width: 300px){...}`
 - `media screen and @media(min-width: 768px){...}`
 
