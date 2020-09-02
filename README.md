@@ -1,10 +1,20 @@
 # Wolox Challenge
 
-#### Starting...
+#### Before to start...
+There are others READMEs that I'm sure it will be helpful to understand some points of the project. You can follow the next links to go:
+- [Layout README](https://github.com/JPGallegos1/WChallenge/blob/master/components/README.md)
+- [Tests README](https://github.com/JPGallegos1/WChallenge/blob/master/tests/README.md)
+- [Pages README](https://github.com/JPGallegos1/WChallenge/blob/master/pages/README.md)
+
+- This is the [Trello](https://trello.com/b/gPSKvW2n/wolox) what a follow for my tasks.
+- This is the Git and Github flow that I followed to handle features
+![alt text](https://imgur.com/EtCjpDe.png "Github and Git flow")
+
+#### Starting.
 - Clone the project
 - Go to the project root
 
-##### Set the environment variables:
+#### Set the environment variables:
 - `NEXT_PUBLIC_BASE_URL=http://private-8e8921-woloxfrontendinverview.apiary-mock.com`
 - `NEXT_PUBLIC_LOGIN_ENDPOINT=login`
 - `NEXT_PUBLIC_TECHS_ENDPOINT=techs`
