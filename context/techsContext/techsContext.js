@@ -21,7 +21,7 @@ export const TechsProvider = ({ children }) => {
     );
   });
 
-  const techs = [...filterTechs].sort((a, b) => {
+  const techs = null || [...filterTechs].sort((a, b) => {
     return (
       (sortTech === "ASC" && a.tech.localeCompare(b.tech)) ||
       (sortTech === "DESC" && b.tech.localeCompare(a.tech))
