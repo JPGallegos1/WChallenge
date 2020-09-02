@@ -1,7 +1,7 @@
 import { createContext, useEffect, useContext, useState } from "react";
 import { useFetch } from "../../hooks/useFetch";
 
-export const URL = `http://private-8e8921-woloxfrontendinverview.apiary-mock.com/techs`;
+export const URL = "http://private-8e8921-woloxfrontendinverview.apiary-mock.com/techs";
 export const TechsContext = createContext();
 
 export const TechsProvider = ({ children }) => {
