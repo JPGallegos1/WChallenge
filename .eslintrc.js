@@ -20,9 +20,10 @@ module.exports = {
   },
   plugins: ["react"],
   rules: {
-    "react/react-proptypes": RULES.OFF,
+    "react/prop-types": RULES.OFF,
     "react/react-in-jsx-scope": RULES.OFF,
     quotes: ["error", "double", { avoidEscape: true }],
-    semi: [2, "always"]
+    semi: [2, "always"],
+    "no-undef": RULES.OFF
   }
 };
