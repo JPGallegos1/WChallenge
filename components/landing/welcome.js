@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/core";
+import { Box, PseudoBox } from "@chakra-ui/core";
 import Layout from "../layout/layout";
 import Hero from "../hero";
 import Title from "../title";
@@ -23,10 +23,13 @@ const Welcome = () => {
       >
         <Title
           as="h1"
-          fontSize="2.8rem"
+          fontSize={{ sm: "1.8rem", md: "2.4rem" }}
+          fontWeight="normal"
           flex={{ sm: 1, md: "0 0 35%" }}
           textAlign={{ sm: "center", md: "left" }}>
-          Bienvenido a tu Entrevista Técnica en Wolox
+          Bienvenido a tu
+          <PseudoBox as="span" fontWeight="bold"> Entrevista Técnica</PseudoBox>  en
+          <PseudoBox as="span" fontWeight="bold" color="wolox.200"> Wolox</PseudoBox>
         </Title>
         <Hero
           src="assets/ImgHero/Ic_ilustra_Hero.png"

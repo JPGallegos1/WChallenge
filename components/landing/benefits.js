@@ -29,8 +29,10 @@ const Benefits = () => {
           fontSize="2rem"
           flex="0 0 35%"
           pt="5rem"
-          textAlign={{ sm: "center", md: "left" }}>
-          Entre los beneficios que ofrecemos se encuentran ;)
+          textAlign={{ sm: "center", md: "left" }}
+          fontWeight="medium"
+        >
+          Entre los beneficios que ofrecemos se encuentran 😉
         </Title>
         <SimpleGrid as="ul" minChildWidth="90px" spacing="40px" justify="space-between" align="center" w="100%" pt="5rem">
           {benefits.map(({ key, label, src, alt }) => (

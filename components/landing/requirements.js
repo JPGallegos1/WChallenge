@@ -22,12 +22,26 @@ const Requirements = () => {
         h="60vh"
         flexDirection={{ sm: "column", md: "row" }}
       >
-        <Title as="h1" fontSize="2.8rem" flex="0 0 35%">
+        <Title as="h2" fontSize={{ sm: "1.8rem", md: "2.4rem" }} flex="0 0 35%">
           Requerimientos
         </Title>
-        <Layout as="ul" justify="space-between" align="left" w="30rem" h="10rem" flexDirection="column">
+        <Layout
+          as="ul"
+          justify="space-between"
+          align="left"
+          w={{ sm: "80%", md: "30rem" }}
+          h="10rem"
+          flexDirection="column"
+        >
           {requirements.map(({ key, label, src }) => (
-            <Layout as="li" key={key} flexDirection="row">
+            <Layout
+              as="li"
+              key={key}
+              flexDirection="row"
+              fontSize={{ sm: ".8rem", md: "1.1rem" }}
+              m="0 auto"
+
+            >
               <Hero src={src} mb={4} mr={4} />
 
               <Box>

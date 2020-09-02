@@ -18,11 +18,12 @@ const Technologies = () => {
       >
         <Title
           as="h2"
-          fontSize="2rem"
+          fontSize={{ sm: "1.4rem", md: "2rem" }}
+          fontWeight={{ sm: "medium" }}
           flex={{ sm: "1", md: "0 0 35%" }}
           textAlign={{ sm: "center", md: "left" }}
         >
-          Estamos buscando para incorporar gente increíble para estas tecnologías
+          Estamos buscando para incorporar gente increíble para estas tecnologías:
         </Title>
         <Hero
           src="assets/Ic_Tecnologys.svg"
