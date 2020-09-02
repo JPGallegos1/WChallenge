@@ -7,5 +7,12 @@ breakpoints.lg = breakpoints[2];
 
 export const CustomTheme = {
   ...theme,
+  colors: {
+    ...theme.colors,
+    wolox: {
+      100: "#318fb5",
+      200: "#81b214"
+    }
+  },
   breakpoints
 };
