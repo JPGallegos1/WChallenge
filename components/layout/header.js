@@ -1,6 +1,6 @@
 import Layout from "./layout";
 import Logo from "./logo";
-import Nav from "./nav";
+import Nav from "./nav/nav";
 
 const Header = () => {
   return (
