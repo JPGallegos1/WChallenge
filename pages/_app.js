@@ -1,6 +1,6 @@
 import { TechsProvider } from "../context/techsContext/techsContext";
 import Header from "../components/layout/header";
-import Footer from "../components/layout/footer";
+import Footer from "../components/layout/footer/footer";
 import Main from "../components/layout/main";
 import { ThemeProvider, CSSReset } from "@chakra-ui/core";
 import { CustomTheme } from "../styles/theme";
