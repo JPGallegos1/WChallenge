@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/core";
 import CardContent from "../card/cardContent";
 
-function ModalTech({ isOpen, onClose, tech }) {
+function ModalTech ({ isOpen, onClose, tech }) {
   return (
     <>
       <Modal isOpen={isOpen} onClose={onClose}>
