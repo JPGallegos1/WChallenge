@@ -5,6 +5,7 @@ There are others READMEs that I'm sure it will be helpful to understand some poi
 - [Layout README](https://github.com/JPGallegos1/WChallenge/blob/master/components/README.md)
 - [Tests README](https://github.com/JPGallegos1/WChallenge/blob/master/tests/README.md)
 - [Pages README](https://github.com/JPGallegos1/WChallenge/blob/master/pages/README.md)
+- [Hooks README](https://github.com/JPGallegos1/WChallenge/blob/master/hooks/README.md)
 
 - This is the [Trello](https://trello.com/b/gPSKvW2n/wolox) what a follow for my tasks.
 - This is the Git and Github flow that I followed to handle features
@@ -14,7 +15,7 @@ There are others READMEs that I'm sure it will be helpful to understand some poi
 - Clone the project
 - Go to the project root
 
-#### Set the environment variables:
+#### Create a .env.local and set the environment variables:
 - `NEXT_PUBLIC_BASE_URL=http://private-8e8921-woloxfrontendinverview.apiary-mock.com`
 - `NEXT_PUBLIC_LOGIN_ENDPOINT=login`
 - `NEXT_PUBLIC_TECHS_ENDPOINT=techs`
