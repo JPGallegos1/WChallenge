@@ -5,6 +5,7 @@ import InputLogin from "../components/login/inputLogin";
 import InputPass from "../components/login/inputPass";
 import Remember from "../components/login/remember";
 import SubmitForm from "../components/login/submitForm";
+import Notification from "../components/notifications/notification";
 
 const Login = () => {
   const { register, errors, handleSubmit } = useForm({
@@ -18,9 +19,10 @@ const Login = () => {
   const { onSubmit, loading, submitting } = useSubmit();
 
   return (
-    <Layout>
-      {loading && (<div>Cargando...</div>)}
-
+    <Layout m={{ sm: "4rem auto", md: "2rem auto" }}>
+      {loading &&
+        <Notification text="Cargando..." status="warning" />
+      }
       <form onSubmit={handleSubmit(onSubmit)}>
         <InputLogin register={register} errors={errors} />
 
@@ -29,6 +31,10 @@ const Login = () => {
         <Remember register={register} />
 
         <SubmitForm submitting={submitting} />
+
+        {submitting &&
+          <Notification text="¡Iniciaste sesión y estás siendo redireccionade!" status="success" />
+        }
       </form>
     </Layout>
   );

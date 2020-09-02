@@ -2,6 +2,7 @@ import {
   Input,
   FormLabel
 } from "@chakra-ui/core";
+import Notification from "../notifications/notification";
 
 const InputLogin = ({ register, errors }) => {
   return (
@@ -17,7 +18,7 @@ const InputLogin = ({ register, errors }) => {
       />
 
       {errors.email &&
-        <div>{errors.email.message}</div>
+        <Notification text={errors.email.message} status="warning" />
       }
     </>
   );

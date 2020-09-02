@@ -11,6 +11,7 @@ const SubmitForm = ({ submitting }) => {
         value="Iniciar sesión"
         color="wolox.100"
         cursor="pointer"
+        w="20rem"
       />
     </>
   );

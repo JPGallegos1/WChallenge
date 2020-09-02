@@ -2,6 +2,7 @@ import {
   Input,
   FormLabel
 } from "@chakra-ui/core";
+import Notification from "../notifications/notification";
 
 const InputPass = ({ register, errors }) => {
   return (
@@ -25,7 +26,7 @@ const InputPass = ({ register, errors }) => {
         })}
       />
       {errors.password &&
-        <div>{errors.password.message}</div>
+        <Notification text={errors.password.message} status="error" />
       }
     </>
   );
